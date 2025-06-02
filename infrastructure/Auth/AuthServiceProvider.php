@@ -27,15 +27,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes(function ($router) {
-            $router->forAccessTokens();
-            // Uncomment for allowing personal access tokens
-            // $router->forPersonalAccessTokens();
-            $router->forTransientTokens();
-        });
-
-        Passport::tokensExpireIn(Carbon::now()->addMinutes(10));
-
+        Passport::enablePasswordGrant();
+        Passport::tokensExpireIn(Carbon::now()->addDays(config('auth.access_token_expires_in')));
         Passport::refreshTokensExpireIn(Carbon::now()->addDays(10));
     }
 }

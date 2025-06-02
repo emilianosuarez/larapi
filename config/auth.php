@@ -104,4 +104,6 @@ return [
         ],
     ],
 
+    // In days
+    'access_token_expires_in' => (int) env('ACCESS_TOKEN_EXPIRES_IN', 60),
 ];
