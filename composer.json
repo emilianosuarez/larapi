@@ -6,21 +6,21 @@
     "type": "project",
     "require": {
         "php": "^8.4",
-        "laravel/framework": "^11.0",
-        "optimus/distributed-laravel": "^1.0.6",
-        "optimus/bruno": "~7.0",
-        "moova/optimus-genie": "^5.3",
-        "sentry/sentry": "~1.6",
-        "optimus/heimdal": "~3.0",
-        "laravel/passport": "^12.0",
-        "optimus/api-consumer": "^0.7"
+        "laravel/framework": "^12.0",
+        "emilianosuarez/api-consumer": "1.0.0",
+        "emilianosuarez/bruno": "1.0.0",
+        "emilianosuarez/distributed-laravel": "^1.0",
+        "emilianosuarez/genie": "1.0.0",
+        "emilianosuarez/heimdal": "1.0.0",
+        "sentry/sentry": "^4.11",
+        "laravel/passport": "^12.0"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
         "filp/whoops": "~2.7",
-        "mockery/mockery": "^1.3",
+        "mockery/mockery": "1.6.*",
         "nunomaduro/collision": "^8.0",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^11.0"
     },
     "autoload": {
         "classmap": [
