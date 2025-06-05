@@ -3,18 +3,18 @@
 Larapi is an API-friendly fork of Laravel, batteries included. If you want to read a more in-depth description 
 of the offerings and how to do modern API development in Laravel I have written a series of blogposts on the topic.
 
-[A Modern REST API in Laravel 5](http://esbenp.github.io/2016/04/11/modern-rest-api-laravel-part-0/)
+[A Modern REST API in Laravel 12](http://esbenp.github.io/2016/04/11/modern-rest-api-laravel-part-0/)
 
 Larapi comes included with...
-* Laravel 5.4
+* Laravel 12
 * Laravel Passport for OAuth Authentication, including a proxy for password and refresh-token grants
 * A new directory structure optimized for separating infrastructure and domain code. Groups your controllers, models, etc. by resource-type. 
-[Read more and view the source code here](https://github.com/esbenp/distributed-laravel)
-* [Optimus\Heimdal](https://github.com/esbenp/heimdal): A modern exception handler for APIs with Sentry and Bugsnag integration out-of-the-box
-* [Optimus\Bruno](https://github.com/esbenp/bruno): A base controller class that gives sorting, filtering, eager loading and pagination for your endpoints
-* [Optimus\Genie](https://github.com/esbenp/genie): A base repository class for requesting entities from your database. Includes integration with Bruno.
-* [Optimus\Architect](https://github.com/esbenp/architect): A library for creating advanced structures of related entities
-* [Optimus\ApiConsumer](https://github.com/esbenp/laravel-api-consumer): A small class for making internal API requests 
+[Read more and view the source code here](https://github.com/emilianosuarez/distributed-laravel)
+* [Optimus\Heimdal](https://github.com/emilianosuarez/heimdal): A modern exception handler for APIs with Sentry and Bugsnag integration out-of-the-box
+* [Optimus\Bruno](https://github.com/emilianosuarez/bruno): A base controller class that gives sorting, filtering, eager loading and pagination for your endpoints
+* [Optimus\Genie](https://github.com/emilianosuarez/genie): A base repository class for requesting entities from your database. Includes integration with Bruno.
+* [Optimus\Architect](https://github.com/emilianosuarez/architect): A library for creating advanced structures of related entities
+* [Optimus\ApiConsumer](https://github.com/emilianosuarez/laravel-api-consumer): A small class for making internal API requests 
 
 ## Motivation
 
@@ -29,7 +29,7 @@ to make Laravel more enjoyable as an API framework.
 First clone the repository
 
 ```bash
-git clone https://github.com/esbenp/larapi my-api
+git clone https://github.com/emilianosuarez/larapi my-api
 ```
 
 Install dependencies
@@ -72,7 +72,7 @@ If you want to save it elsewhere or change the naming be sure to modify the Logi
 You can quickly test if the authentication works by creating an user using the include command.
 
 ```bash
-php artisan users:add Esben esben@esben.dk 1234
+php artisan users:add Emiliano emilano@email.com 1234
 ```
 
 Now serve your application and try to request a token using cURL
@@ -81,7 +81,7 @@ Now serve your application and try to request a token using cURL
 php artisan serve
 curl -X POST http://localhost:8000/login -H 'Content-Type:application/json' -d '
 {
-    "email":"esben@esben.dk",
+    "email":"emiliano@email.com",
     "password":"1234"
 }'
 ```
@@ -101,15 +101,15 @@ curl http://localhost:8000/users -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhb
 This should return a response like so
 
 ```json
-{"users":[{"id":1,"name":"Esben","email":"esben@esben.dk","created_at":"2017-03-19 19:59:15","updated_at":"2017-03-19 19:59:15"}]}
+{"users":[{"id":1,"name":"Emiliano","email":"emiliano@email.com","created_at":"2025-06-05 19:59:15","updated_at":"2025-06-05 19:59:15"}]}
 ```
 
 You can refresh a new token by requesting `POST /login/refresh` and logout using `POST /logout`
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/esbenp/architect/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/emilianosuarez/architect/blob/master/CONTRIBUTING.md) for details.
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/esbenp/architect/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/emilianosuarez/architect/blob/master/LICENSE) for more information.
